@@ -17,6 +17,8 @@ if (process.platform !== "darwin") {
     "/usr/bin/xcrun",
     [
       "swiftc",
+      "-target",
+      `${process.arch === "arm64" ? "arm64" : "x86_64"}-apple-macos13.0`,
       "-O",
       "-framework",
       "AppKit",

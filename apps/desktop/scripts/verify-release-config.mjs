@@ -1,3 +1,4 @@
+import { macSigningPolicy } from "./mac-signing-policy.mjs";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -226,10 +227,25 @@ const [
 ]);
 
 assert(
-  runElectronBuilderSource.includes("-c.forceCodeSigning=true") &&
-    runElectronBuilderSource.includes("LANCER_MAC_SIGNING_IDENTITY"),
+  runElectronBuilderSource.includes(
+    "macSigningPolicy(electronBuilderArgs, process.env, configured)",
+  ),
   "macOS runner must require persistent signing",
 );
+const persistentPolicy = macSigningPolicy(["--mac"], {
+  LANCER_MAC_SIGNING_IDENTITY: "a".repeat(40),
+});
+assert(
+  persistentPolicy.args.includes("-c.forceCodeSigning=true"),
+  "Normal macOS packaging must require persistent signing",
+);
+let missingIdentityRejected = false;
+try {
+  macSigningPolicy(["--mac"], {});
+} catch {
+  missingIdentityRejected = true;
+}
+assert(missingIdentityRejected, "Missing certificate must never silently become a preview");
 await assertWorkflowActionPolicy(repoDir);
 await validateConfiguration(builderConfig, new DebugLogger(false));
 validateBuilderConfig(builderConfig, JSON.parse(desktopPackageSource), afterRemoveSource);

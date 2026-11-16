@@ -4,7 +4,7 @@
 
 TEAM 是基于 Pi 的桌面科研辅助工具：把研究想法、材料、团队讨论、版本与交付放在同一工作区。你是课题发起人和最终决策者，导师、研究者 A、独立复核 B、资料员保留各自持续会话。导师在关键未知处组织引导式研讨，支持自由回答，并区分“探讨想法”和“正式指令”。
 
-**当前版本：1.1.0-beta.1，开发测试版。** 本次发布源码和可校验源码归档；没有提供签名／公证的桌面安装包。代码、存储、类型与构建检查不能代替真实研究、界面或模型验收。研究者仍需核查来源、方法、数据与结论。
+**当前版本：1.1.0-beta.2，开发测试版。** 提供 Apple Silicon macOS 安装测试包与源码；安装包未经过 Apple Developer ID 签名和公证。代码、存储、类型与构建检查不能代替真实研究、界面或模型验收。研究者仍需核查来源、方法、数据与结论。
 
 [版本发布](https://github.com/chengyingzh433-stack/TEAM/releases) · [安装与已有 Pi 适配](docs/team-install.md) · [当前能力](docs/education-research-group.md) · [研讨测试清单](docs/education-research-group-guided-discussion.md)
 
@@ -17,6 +17,10 @@ TEAM 是基于 Pi 的桌面科研辅助工具：把研究想法、材料、团�
 - 同版本导出 Word、Markdown、HTML 与溯源；显式选择可分发材料后生成研究归档，导入创建独立新课题。
 - 显示执行容量、已知用量及未知预留；失败、暂停与恢复遵循原记录，不盲目重放未知请求。
 - 独立保留 CYZ 论文工作台和旧课题模式，不强制迁移原有研究。
+
+## macOS 直接安装
+
+M 系列 Mac 用户可从[发布页](https://github.com/chengyingzh433-stack/TEAM/releases/tag/v1.1.0-beta.2)下载 `TEAM-1.1.0-beta.2-arm64-preview.dmg`，把 TEAM 拖入“应用程序”，打开后配置自己的账号和模型。无需安装开发环境或全局 Pi。最低系统目标 macOS 13，Intel 版暂未提供；首次打开的系统提示、已有数据保护和验证边界见[macOS 安装说明](docs/team-macos-install.md)。
 
 ## Pi 是否需要另装
 
@@ -46,7 +50,7 @@ pnpm --filter @lancer/desktop build
 
 内部包名 `@lancer/*`、协议字段和既有数据位置为兼容保留，界面产品名为 TEAM。旧 Lancer 数据继续位于原应用数据目录的 `Lancer` 子目录；新名称不会自动迁移或清空原课题。不要手工删除旧目录。
 
-macOS 正式安装包需要持久签名证书；本次未配置签名／公证分发，源码启动与打包流程见安装文档。
+默认本地更新仍要求持久签名证书；macOS 正式发布需要 Developer ID 和公证；当前是明确选择的未公证测试分发，不会在签名失败时悄悄降级。源码启动与打包流程见安装文档。
 
 ## 边界与来源
 

@@ -6,6 +6,8 @@ import { fileURLToPath } from "node:url";
 
 import { prepareAppImageTools } from "./appimage-tools.mjs";
 import { withGithubDownloadRetry } from "./github-download-retry.mjs";
+import { macSigningPolicy } from "./mac-signing-policy.mjs";
+import { prepareMacTools } from "./prepare-mac-tools.mjs";
 import { releaseHomepage } from "./release-homepage.mjs";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
@@ -60,6 +62,8 @@ function spawnElectronBuilder(electronBuilderArgs, signingEnv = {}) {
 }
 
 export async function runElectronBuilder(electronBuilderArgs) {
+  if (electronBuilderArgs.includes("--mac-preview") && !electronBuilderArgs.includes("--mac"))
+    throw new Error("--mac-preview requires --mac");
   const homepage = releaseHomepage(
     process.env,
     electronBuilderArgs.includes("--linux") && !electronBuilderArgs.includes("--dir"),
@@ -78,25 +82,10 @@ export async function runElectronBuilder(electronBuilderArgs) {
       "Library/Application Support/Lancer/local-signing.json",
     );
     const configured = existsSync(configPath) ? JSON.parse(readFileSync(configPath, "utf8")) : {};
-    const identity = process.env.LANCER_MAC_SIGNING_IDENTITY ?? configured.identity;
-    if (!identity || !/^[A-Fa-f0-9]{40}$/.test(identity)) {
-      throw new Error(
-        "Configure a persistent certificate SHA-1 in LANCER_MAC_SIGNING_IDENTITY or Lancer/local-signing.json. Refusing an ad-hoc macOS update.",
-      );
-    }
-    const keychain = process.env.LANCER_MAC_SIGNING_KEYCHAIN ?? configured.keychain;
-    if (keychain !== undefined) {
-      if (typeof keychain !== "string" || !path.isAbsolute(keychain) || !existsSync(keychain)) {
-        throw new Error("Configured Lancer signing keychain must be an existing absolute path.");
-      }
-      signingEnv.CSC_KEYCHAIN = keychain;
-    }
-    // Pin one certificate; never fall back to an unrelated keychain identity or ad-hoc signing.
-    electronBuilderArgs = [
-      ...electronBuilderArgs,
-      `-c.mac.identity=${identity}`,
-      "-c.forceCodeSigning=true",
-    ];
+    const policy = macSigningPolicy(electronBuilderArgs, process.env, configured);
+    electronBuilderArgs = policy.args;
+    Object.assign(signingEnv, policy.env);
+    await prepareMacTools();
   }
   const result = await withGithubDownloadRetry(() =>
     spawnElectronBuilder(electronBuilderArgs, signingEnv),

@@ -1,5 +1,12 @@
 # Changelog
 
+## TEAM 1.1.0-beta.2 — 2026-11-17
+
+- Ship Apple Silicon macOS preview DMG and ZIP with Electron, Pi SDK, production dependencies and pinned rg/fd tools.
+- Add explicit ad-hoc preview packaging while keeping persistent-signature requirements for normal updates. No Developer ID or notarization claim.
+- Keep macOS 13 as the minimum binary deployment target and verify packaged runtime imports with an isolated account and bundled Node runtime.
+- Preserve the original research/profile directories; accounts and models remain user-configured. See [installation](docs/team-macos-install.md).
+
 ## TEAM 1.1.0-beta.1 — 2026-11-16
 
 - Define TEAM as a Pi-powered research assistance tool, with a new original T icon and updated product copy.

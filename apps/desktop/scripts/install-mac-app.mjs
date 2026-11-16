@@ -3,7 +3,7 @@ import { existsSync, renameSync, mkdtempSync } from "node:fs";
 import path from "node:path";
 
 const candidate = path.resolve(process.argv[2] ?? "");
-const destination = "/Applications/Lancer.app";
+const destination = "/Applications/TEAM.app";
 const migrate = process.argv.includes("--migrate-signing");
 function run(command, args) {
   return execFileSync(command, args, { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] });
@@ -43,12 +43,12 @@ if (existsSync(destination)) {
   }
 }
 const processes = run("ps", ["-axo", "command="]);
-if (processes.split("\n").some((line) => line.startsWith(`${destination}/Contents/MacOS/Lancer`))) {
-  throw new Error("Quit Lancer normally before installing; the installer never kills it.");
+if (processes.split("\n").some((line) => line.startsWith(`${destination}/Contents/MacOS/TEAM`))) {
+  throw new Error("Quit TEAM normally before installing; the installer never kills it.");
 }
 const staging = mkdtempSync("/Applications/.lancer-update-");
-const staged = path.join(staging, "Lancer.app");
-const backup = path.join(staging, "previous-Lancer.app");
+const staged = path.join(staging, "TEAM.app");
+const backup = path.join(staging, "previous-TEAM.app");
 run("ditto", [candidate, staged]);
 run("codesign", ["--verify", "--deep", "--strict", staged]);
 if (requirement(staged) !== next) throw new Error("Staged signing identity mismatch");

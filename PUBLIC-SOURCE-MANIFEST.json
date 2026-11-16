@@ -2,8 +2,8 @@
   "product": "TEAM",
   "candidate": true,
   "note": "Local source candidate. Asset rights and final release review are still required; this is not a secret-scan certification.",
-  "revision": "47595724ae9b643e2c4768c2f48d69ca7142d73d",
-  "exportedAt": "2026-11-16T16:00:29.077Z",
+  "revision": "5849611a8ad6f4e4fe85acea9cf0c1affa09be3d",
+  "exportedAt": "2026-11-16T17:05:11.201Z",
   "excluded": 25,
   "files": [
     {
@@ -173,8 +173,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 2389,
-      "sha256": "ac5544ff68a5f165c4f217654cec03330a95bf298d87f745aee7e28b73c80eaa"
+      "bytes": 2981,
+      "sha256": "d6914514886ee6acab737aea6d2efff63ec0bb5c63e4811aea35a326d923dc21"
     },
     {
       "path": "CLAUDE.md",
@@ -197,8 +197,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4792,
-      "sha256": "42ad9ab11752551dbe8a38ea859787f02e5fc949ca34f257ee76c04097b0e0b8"
+      "bytes": 5376,
+      "sha256": "438db202577a51570f11a5d24a29b884e5ccf9bc45969ea1867c19a1bb1bda8e"
     },
     {
       "path": "SECURITY.md",
@@ -572,8 +572,8 @@
     },
     {
       "path": "apps/desktop/electron-builder.yml",
-      "bytes": 3896,
-      "sha256": "317da06ea6f889c2f4ffc24d28980301081e7f062a21d9683fd102cbeda596c1"
+      "bytes": 3998,
+      "sha256": "4b8b5d2308a1324286f58eb074e22c73d0918aeb95f5243bf10df946278facf6"
     },
     {
       "path": "apps/desktop/electron.vite.config.mjs",
@@ -777,8 +777,8 @@
     },
     {
       "path": "apps/desktop/electron/main.ts",
-      "bytes": 67901,
-      "sha256": "84d32f5171881c26d58a773681e16e4650e86cec3fc3113c0616a92fcd4eda03"
+      "bytes": 68165,
+      "sha256": "e23abf466fa24f83e3db8b1d635972c4af891af826878aa6154da2ba2f9b9873"
     },
     {
       "path": "apps/desktop/electron/orchestration/app-store-orchestration.ts",
@@ -1232,8 +1232,8 @@
     },
     {
       "path": "apps/desktop/package.json",
-      "bytes": 17034,
-      "sha256": "0030d2a7e3a30f7cc404296a746d1a171c3cebdeab04557c4e9aa5951b3e97fe"
+      "bytes": 17164,
+      "sha256": "4b58919ccf3d9db562ce363675d92f484c9fe8b249eb60335bd514037472d96c"
     },
     {
       "path": "apps/desktop/pi-orb.html",
@@ -1577,8 +1577,8 @@
     },
     {
       "path": "apps/desktop/scripts/assert-packaged-runtime-deps.mjs",
-      "bytes": 15183,
-      "sha256": "8b646ebbcb3741a56aa9af77bd12575fb464f2398116062955566eee3e2fb90e"
+      "bytes": 15179,
+      "sha256": "53d5b378b4023a539762d5aa876a36df66d0930ccfacf03fc9bf2e742a80c1a5"
     },
     {
       "path": "apps/desktop/scripts/assert-runtime-model-registry.mjs",
@@ -1602,13 +1602,13 @@
     },
     {
       "path": "apps/desktop/scripts/build-doubao-bridge.mjs",
-      "bytes": 1433,
-      "sha256": "b878c424003b3ab04f812ab4f7d469763c87f2fb6490d11f68b5defcb0d26adb"
+      "bytes": 1524,
+      "sha256": "d5c14cc0449b6119b81d1245bec66f2479dbb1154045f953270ad58a7ce3f3a4"
     },
     {
       "path": "apps/desktop/scripts/build-notification-status-helper.mjs",
-      "bytes": 1009,
-      "sha256": "a73557b67bf87de2c3024311fa88a10155463fe470340943fdc976e463cd8746"
+      "bytes": 1158,
+      "sha256": "19584b1246f32c6e5851b6537d926f8545e32ca4a716fda2ad542b8a3a5e9629"
     },
     {
       "path": "apps/desktop/scripts/capture-showcase.mts",
@@ -1657,8 +1657,8 @@
     },
     {
       "path": "apps/desktop/scripts/install-mac-app.mjs",
-      "bytes": 2846,
-      "sha256": "3801af35422831b5455b655915ce83857514b26cb332ed4e661d6ed6d20fc294"
+      "bytes": 2836,
+      "sha256": "7b7805067669ba3cce8308756bf790bc1c42e9012fc3d03702df3e84fbdf98f5"
     },
     {
       "path": "apps/desktop/scripts/lancer-compare.mjs",
@@ -1681,9 +1681,29 @@
       "sha256": "eeb2b8ef551d98566cb2bfd7816fc0fd3ee983eba05af5f3f4cb8c72936bd300"
     },
     {
+      "path": "apps/desktop/scripts/mac-bundled-tools.json",
+      "bytes": 718,
+      "sha256": "3687a49019ce780bbb0fb61a2de2874d0c1e53362d800900aa7f2a4954a69f16"
+    },
+    {
+      "path": "apps/desktop/scripts/mac-signing-policy.mjs",
+      "bytes": 2453,
+      "sha256": "c2576eef27074472a75672323ed05d4376cbdd20a42f44f6daec034d6f3c3b9d"
+    },
+    {
+      "path": "apps/desktop/scripts/mac-signing-policy.test.mjs",
+      "bytes": 1390,
+      "sha256": "b9cb7b26eb0c55da6a9b629217fdff5b4e692d8fed550c955681074b46c02180"
+    },
+    {
       "path": "apps/desktop/scripts/package-windows.mjs",
       "bytes": 297,
       "sha256": "529d903ce63ad0c63b46126dfe0a5258e0ed6651892abbf6645b8b9128a0ca15"
+    },
+    {
+      "path": "apps/desktop/scripts/prepare-mac-tools.mjs",
+      "bytes": 2594,
+      "sha256": "3bb764a2c175b1d13cdc147a9b22430a777ca6b5353cdba1f8e3111e78b60e6b"
     },
     {
       "path": "apps/desktop/scripts/product-media/capture.media.ts",
@@ -1727,8 +1747,8 @@
     },
     {
       "path": "apps/desktop/scripts/run-electron-builder.mjs",
-      "bytes": 4899,
-      "sha256": "9166ef7f12579f376131a2c2f6a07dec280c2ab9914dc03c74391de5a1e7d5ea"
+      "bytes": 4429,
+      "sha256": "1a7a591dfc3207217e3514ac2680760663e82a766602f7c15494a6b6515c2317"
     },
     {
       "path": "apps/desktop/scripts/verify-launcher-contract.mjs",
@@ -1746,9 +1766,14 @@
       "sha256": "da6634f1f8af7176aacae52dd1fb8f543b24c521db614c44b6989531b4a0ddb6"
     },
     {
+      "path": "apps/desktop/scripts/verify-mac-preview.mjs",
+      "bytes": 4385,
+      "sha256": "26660d81961d59ba4ed65678bad9ac409866ab535e637f4d82f78c929655c5e9"
+    },
+    {
       "path": "apps/desktop/scripts/verify-release-config.mjs",
-      "bytes": 9289,
-      "sha256": "884ec5b6c7e7621367429f17e4a174e77fe4f24cd36002b9c34ef1cc9e4abc5c"
+      "bytes": 9781,
+      "sha256": "123ef30e9919097e7dc1104b7ed00035aa37edefde1efd5075bfb0c9616ee8e3"
     },
     {
       "path": "apps/desktop/scripts/verify-windows-release.ps1",
@@ -4937,8 +4962,8 @@
     },
     {
       "path": "apps/website/app/page.tsx",
-      "bytes": 10096,
-      "sha256": "4904a9179bde41a7612250b7507a6f13fd8a24a9a033ec1af8f399e112ae2d6e"
+      "bytes": 10153,
+      "sha256": "d038d91e939f080ce18e82fbfcbb8aa1fdd6b265443f580dcb71ce775a50853c"
     },
     {
       "path": "apps/website/app/robots.ts",
@@ -4963,7 +4988,7 @@
     {
       "path": "apps/website/package.json",
       "bytes": 453,
-      "sha256": "cd9cb08d78be22a20f5c88cb96a234b546273562f7e6661d4264ac00f6c230bb"
+      "sha256": "b34b1def46dc914f5246cda14a5ed7de8ee0ec2006b4b955dbf72b8b42495203"
     },
     {
       "path": "apps/website/public/icon.svg",
@@ -5077,8 +5102,8 @@
     },
     {
       "path": "docs/macos-local-signing.md",
-      "bytes": 2126,
-      "sha256": "31654c75239aa8cacea5f9a5559bd2a0cae2b01d709a5431634c5929e4e48aa5"
+      "bytes": 2872,
+      "sha256": "7886d4522cce35087e5f58166416ec59299cac6895c9e88ab0504f4b799ea355"
     },
     {
       "path": "docs/mcp-integrations.md",
@@ -5112,13 +5137,18 @@
     },
     {
       "path": "docs/team-install.md",
-      "bytes": 3279,
-      "sha256": "1ea6566f0a7da9d00313a209c397a9affe9e50267e7fda7344e8422a8f812174"
+      "bytes": 3455,
+      "sha256": "1f8a8dc4f7a143fda56b97d4ec252b70c7090b6b241070f2953b64f5ec1450a9"
+    },
+    {
+      "path": "docs/team-macos-install.md",
+      "bytes": 3795,
+      "sha256": "1eb10cf171f4b267540abfc90b0ff19e0d3bd88274f5cd8e6d1ed7508d544d7b"
     },
     {
       "path": "docs/team-release.md",
-      "bytes": 1722,
-      "sha256": "71fec748f5fe06a29683713dba1e99afc16887727ebf16b323ef110f8dfedf2f"
+      "bytes": 2657,
+      "sha256": "82b932dd58b5bc121a8528554e9e2ff37cb2be8d1786ca0a32fbe8ec71a03df2"
     },
     {
       "path": "docs/third-party-dependencies.md",
@@ -5307,8 +5337,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 5252,
-      "sha256": "f2888f27ab863ea7e9cc8a34c49a99f4b43a4355a0c79af3d3917d2f9ec3685f"
+      "bytes": 5301,
+      "sha256": "74abdf6b1671f97f73c98475afdf06762276867d1de868197f7f80f56c4530a3"
     },
     {
       "path": "packages/catalogs/package.json",
@@ -5892,8 +5922,8 @@
     },
     {
       "path": "scripts/build-mac-lancer.sh",
-      "bytes": 4426,
-      "sha256": "64ef0791daa314b66495538526cdc1ea3ebc474342a89e70283e3ec9efd713ce"
+      "bytes": 4414,
+      "sha256": "0817c8f1d70c7b8c9e24e85c91e141dd560b179c96179ec8bab5b599603e3c6e"
     },
     {
       "path": "scripts/capture-lancer-preview.mjs",

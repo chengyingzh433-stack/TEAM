@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# Build a persistently signed, non-notarized Lancer.app + .dmg for Apple Silicon.
+# Build a persistently signed, non-notarized TEAM.app + .dmg for Apple Silicon.
 #
 # Usage:
 #   bash scripts/build-mac-lancer.sh            # install deps, build, package, verify
 #   bash scripts/build-mac-lancer.sh --skip-install
-#   bash scripts/build-mac-lancer.sh --dir      # only Lancer.app (no dmg/zip), fastest
-#   bash scripts/build-mac-lancer.sh --install  # also copy Lancer.app into /Applications
+#   bash scripts/build-mac-lancer.sh --dir      # only TEAM.app (no dmg/zip), fastest
+#   bash scripts/build-mac-lancer.sh --install  # also copy TEAM.app into /Applications
 #
 # Requirements: macOS on Apple Silicon, Node.js >= 22.19.0 < 26, Xcode Command Line Tools
 # (xcode-select --install). A persistent signing identity must be configured.
@@ -97,7 +97,7 @@ fi
   node scripts/run-electron-builder.mjs "${targets[@]}" --publish never "-c.directories.output=$release_dir"
 )
 
-app_path="$release_dir/mac-arm64/Lancer.app"
+app_path="$release_dir/mac-arm64/TEAM.app"
 [[ -d "$app_path" ]] || fail "Expected $app_path was not produced."
 
 step "Verifying the persistent signature"
@@ -113,5 +113,5 @@ fi
 step "Done"
 echo "App: $app_path"
 if ((DIR_ONLY == 0)); then
-  find "$release_dir" -maxdepth 1 \( -name 'Lancer-*.dmg' -o -name 'Lancer-*.zip' \) -print
+  find "$release_dir" -maxdepth 1 \( -name 'TEAM-*.dmg' -o -name 'TEAM-*.zip' \) -print
 fi

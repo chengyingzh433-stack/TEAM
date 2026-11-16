@@ -58,7 +58,7 @@ const installs = [
     platform: "macOS",
     detail: "Apple Silicon · development build checked; functional acceptance pending",
     steps:
-      "Build from source with Node 24, pnpm 10.34.9 and Xcode Command Line Tools. Local installation uses your configured persistent signing certificate; public notarization is a separate release gate.",
+      "Build from source with Node 24, pnpm 10.34.9 and Xcode Command Line Tools. Developers can use persistent signing; the Apple Silicon preview DMG bundles Pi and requires no development tools. It is not notarized.",
     command: "pnpm install --frozen-lockfile && pnpm doctor && pnpm dev",
   },
   {
@@ -99,7 +99,7 @@ const faqs = [
   },
   {
     q: "How do updates work?",
-    a: "Use the TEAM repository and its source releases. This beta has no signed desktop installer or automatic upstream updates.",
+    a: "Use the TEAM repository and its source releases. This beta offers an Apple Silicon test DMG without Apple notarization. There are no automatic upstream updates.",
   },
 ] as const;
 
@@ -148,7 +148,7 @@ export default function Page() {
         <section className="hero">
           <div className="container">
             <a className="hero__badge" href={RELEASES_URL}>
-              TEAM 1.1.0-beta.1 · source beta
+              TEAM 1.1.0-beta.2 · macOS preview
               <span aria-hidden="true">→</span>
             </a>
             <h1>A workspace for research assistance</h1>

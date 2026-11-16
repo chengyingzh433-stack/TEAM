@@ -31,3 +31,17 @@ build with another, without touching the permission settings between them.
 This local scheme is not Apple notarization or a public distribution claim.
 Public releases should use an appropriate Developer ID and notarization workflow.
 Apple's identity model: https://developer.apple.com/library/archive/technotes/tn2206/
+
+## TEAM explicit preview distribution
+
+`pnpm --filter @lancer/desktop run package:mac:preview` deliberately builds an
+Apple Silicon ad-hoc test DMG and ZIP, with `preview` in artifact filenames.
+It bundles the Pi runtime and pinned search tools. This mode never replaces an
+installed application or publishes automatically. It is not Developer ID signing
+or notarization; recipients may encounter Gatekeeper. See
+[TEAM macOS installation](team-macos-install.md).
+
+The default runner still rejects missing persistent certificates. A failed signed
+build does not fall back to preview. `install-mac-app.mjs` continues to reject an
+ad-hoc identity and now targets `/Applications/TEAM.app`; old Lancer apps are not
+removed or migrated automatically.

@@ -22,8 +22,20 @@ if (process.platform !== "darwin") {
 
 await mkdir(outputDir, { recursive: true });
 for (const helper of helpers) {
-  await execFileAsync("xcrun", ["swiftc", helper.sourcePath, "-O", "-o", helper.outputPath], {
-    cwd: desktopDir,
-  });
+  await execFileAsync(
+    "xcrun",
+    [
+      "swiftc",
+      "-target",
+      `${process.arch === "arm64" ? "arm64" : "x86_64"}-apple-macos13.0`,
+      helper.sourcePath,
+      "-O",
+      "-o",
+      helper.outputPath,
+    ],
+    {
+      cwd: desktopDir,
+    },
+  );
   console.log(`Built native helper at ${helper.outputPath}`);
 }

@@ -1,6 +1,6 @@
 # TEAM 安装、Pi 适配与数据保护
 
-TEAM 1.1.0-beta.1 是源码测试版。仓库带有 Pi SDK 依赖与锁文件；`pnpm install --frozen-lockfile` 安装应用运行所需的 Pi 引擎，不需要另装全局 Pi CLI。没有打包账号或模型权重，也不提供免费模型服务。
+TEAM 1.1.0-beta.2 提供 macOS Apple Silicon 未公证安装测试包，普通用户先看 [macOS 安装说明](team-macos-install.md)。下文保留源码和已有 Pi 适配方式。仓库带有 Pi SDK 依赖与锁文件；`pnpm install --frozen-lockfile` 安装应用运行所需的 Pi 引擎，不需要另装全局 Pi CLI。没有打包账号或模型权重，也不提供免费模型服务。
 
 ## 没有安装 Pi
 
@@ -31,7 +31,7 @@ TEAM 是通用科研辅助工具，当前研究流程重点适配教育研究。
 
 ## 构建与分发
 
-本次发布源码 ZIP/tar.gz 及校验值，不提供预编译桌面安装器。macOS 正式打包脚本要求持续使用的签名证书；本次环境未配置，因此没有绕过该条件制作安装器。开发构建通过不代表已完成签名、公证、安装或真实模型验收。
+当前发布 DMG／ZIP 安装测试包、源码与校验值。默认 macOS 更新仍要求持久签名证书；新增显式 `package:mac:preview` 生成带 preview 标签的 ad-hoc 测试包，不自动安装或发布。开发构建和包结构检查通过不代表已完成 Apple 公证、实际安装或真实模型验收。
 
 ```sh
 pnpm --filter @lancer/desktop build

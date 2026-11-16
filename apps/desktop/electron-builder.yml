@@ -54,7 +54,8 @@ asarUnpack:
 artifactName: ${productName}-${version}-${arch}.${ext}
 
 mac:
-  category: public.app-category.developer-tools
+  category: public.app-category.education
+  minimumSystemVersion: "13.0"
   # The packaging runner overrides identity with the pinned local certificate.
   # Missing configuration must fail instead of producing an ad-hoc update.
   # Local builds are not notarized.
@@ -70,6 +71,9 @@ mac:
     - target: zip
       arch: arm64
   darkModeSupport: true
+  extraResources:
+    - from: build/packaged-tools/mac-arm64
+      to: tools
   extraFiles:
     - from: build/native/pi-gui-notification-status-helper
       to: MacOS/pi-gui-notification-status-helper

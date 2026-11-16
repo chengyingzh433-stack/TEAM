@@ -980,6 +980,11 @@ if (augmentedPath.changed) {
   process.env.PATH = augmentedPath.path;
 }
 
+// Packaged Pi resolves its search tools from the app, without installing global tools.
+if (app.isPackaged && process.platform === "darwin") {
+  process.env.PATH = `${path.join(process.resourcesPath, "tools", "bin")}${path.delimiter}${process.env.PATH ?? ""}`;
+}
+
 // TEAM keeps the legacy Lancer data location explicitly: rebranding must not hide
 // existing projects or sessions. Pi config (~/.pi/agent) remains independently shared.
 app.setName("TEAM");

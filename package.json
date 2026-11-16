@@ -1,7 +1,7 @@
 {
   "name": "lancer",
   "private": true,
-  "version": "1.1.0-beta.1",
+  "version": "1.1.0-beta.2",
   "license": "MIT",
   "packageManager": "pnpm@10.34.9",
   "scripts": {
@@ -17,7 +17,7 @@
     "test": "pnpm build:shared && pnpm -r --if-present test",
     "e2e": "pnpm --filter @lancer/desktop run test:e2e:core",
     "test:homebrew-tap": "node scripts/test-update-homebrew-tap.mjs",
-    "test:release-helpers": "node --test apps/desktop/scripts/release-artifacts.test.mjs apps/desktop/scripts/github-release-state.test.mjs apps/desktop/scripts/github-download-retry.test.mjs apps/desktop/scripts/dependency-overrides.test.mjs apps/desktop/scripts/verify-linux-release.test.mjs apps/desktop/scripts/release-homepage.test.mjs scripts/verify-release-version.test.mjs scripts/release-readiness.test.mjs scripts/package-public-source.test.mjs apps/desktop/scripts/appimage-tools.test.mjs",
+    "test:release-helpers": "node --test apps/desktop/scripts/release-artifacts.test.mjs apps/desktop/scripts/github-release-state.test.mjs apps/desktop/scripts/github-download-retry.test.mjs apps/desktop/scripts/dependency-overrides.test.mjs apps/desktop/scripts/verify-linux-release.test.mjs apps/desktop/scripts/release-homepage.test.mjs scripts/verify-release-version.test.mjs scripts/release-readiness.test.mjs scripts/package-public-source.test.mjs apps/desktop/scripts/appimage-tools.test.mjs apps/desktop/scripts/mac-signing-policy.test.mjs",
     "verify:install-copy": "node scripts/verify-install-copy.mjs",
     "verify:release-config": "node apps/desktop/scripts/verify-release-config.mjs",
     "verify:release-version": "node scripts/verify-release-version.mjs",
