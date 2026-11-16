@@ -1,0 +1,293 @@
+.research-group {
+  /* This panel precedes the transcript's scroll container. Keep expanded forms
+     inside their own viewport so they cannot overflow behind the composer. */
+  flex: 0 1 auto;
+  min-height: 0;
+  max-height: 60%;
+  overflow: auto;
+  margin: 8px 0 18px;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  border-block: 1px solid var(--border, #ddd);
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--text);
+}
+.research-group-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.research-group-heading strong {
+  font-size: 16px;
+  margin-right: 14px;
+}
+.research-group-heading span,
+.research-group-source,
+.research-group-config p {
+  color: var(--text-muted, #777);
+  font-size: 12px;
+}
+.research-group-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.research-group button {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid var(--border, #ddd);
+  border-radius: 5px;
+  background: transparent;
+  padding: 4px 9px;
+  color: inherit;
+}
+.research-group button:hover {
+  background: var(--hover, #8881);
+}
+.research-group button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.research-group-config {
+  margin: 14px 0;
+  display: grid;
+  gap: 10px;
+}
+.research-group-config label {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+.research-group-config input,
+.research-group-config select {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--border, #ccc);
+  border-radius: 4px;
+  padding: 7px;
+  color: inherit;
+  background: var(--main, #fff);
+  font: inherit;
+  box-sizing: border-box;
+}
+.research-group-models {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.research-m3 label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-block: 8px;
+}
+.research-m3 input:not([type="checkbox"]),
+.research-m3 select,
+.research-m3 textarea {
+  flex: 1 1 180px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+  background: var(--main, #fff);
+  border: 1px solid var(--border, #ccc);
+  border-radius: 4px;
+  padding: 6px;
+}
+.research-m3 textarea {
+  min-height: 70px;
+}
+.research-m3 pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 22em;
+  overflow: auto;
+}
+.research-m3 article {
+  margin-block: 12px;
+  padding-block: 8px;
+  border-top: 1px solid var(--border, #ddd);
+}
+.research-group-config > button {
+  justify-self: start;
+}
+.research-group-objective {
+  margin: 12px 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 8em;
+  overflow: auto;
+}
+.research-group-members {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 20px;
+}
+.research-group-members button {
+  display: grid;
+  text-align: left;
+  border: 0;
+  border-bottom: 1px solid var(--border, #ddd);
+  border-radius: 0;
+  padding: 10px 0;
+  min-width: 0;
+}
+.research-group-members span {
+  font-weight: 600;
+}
+.research-group-members small {
+  overflow-wrap: anywhere;
+  color: var(--text-muted, #777);
+  font-size: 12px;
+}
+.research-group-members i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #999;
+  margin-right: 7px;
+}
+.research-group-members [data-running="true"] i {
+  background: #4e8965;
+}
+.research-group-records {
+  margin-top: 10px;
+}
+.research-group summary {
+  cursor: pointer;
+  padding: 5px 0;
+  overflow-wrap: anywhere;
+}
+.research-group-artifact {
+  border-bottom: 1px solid var(--border, #ddd);
+  padding: 4px 0;
+}
+.research-group-artifact summary small {
+  display: block;
+  margin-left: 16px;
+  color: var(--text-muted, #777);
+}
+.research-group-records ol {
+  list-style: none;
+  margin: 6px 0;
+  padding: 0;
+}
+.research-group-records li {
+  display: flex;
+  gap: 12px;
+  padding: 3px 0;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.research-group-records time {
+  flex-shrink: 0;
+  color: var(--text-muted, #777);
+  font-variant-numeric: tabular-nums;
+}
+.research-group pre {
+  max-height: 360px;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+}
+.research-group-error {
+  color: var(--error, #b44335);
+  overflow-wrap: anywhere;
+}
+@media (max-width: 600px) {
+  .research-group-models,
+  .research-group-members {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .research-group-heading {
+    align-items: flex-start;
+  }
+}
+
+.research-group-stages {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+  color: var(--text-muted, #777);
+}
+.research-group-stages li {
+  padding: 4px 8px;
+  border: 1px solid var(--line, #ddd);
+  border-radius: 4px;
+}
+.research-group-stages li[aria-current="step"] {
+  color: var(--text, #222);
+  font-weight: 600;
+  background: var(--sidebar, #f1f1ef);
+}
+
+.research-group-reconsider {
+  margin: 12px 0;
+}
+.research-group-reconsider label {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.research-group-reconsider textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  font: inherit;
+}
+
+.research-material-item {
+  margin-block: 10px;
+  overflow-wrap: anywhere;
+}
+.research-material-item label {
+  display: grid;
+  gap: 6px;
+  margin-block: 10px;
+}
+.research-material-item select,
+.research-material-item textarea {
+  max-width: 100%;
+  padding: 6px 8px;
+  color: inherit;
+  font: inherit;
+  background: var(--bg-primary, transparent);
+  border: 1px solid var(--border-color, #8886);
+  border-radius: 5px;
+}
+.research-material-item table {
+  border-collapse: collapse;
+  margin-block: 8px;
+}
+.research-material-item th,
+.research-material-item td {
+  padding: 5px 12px;
+  border: 1px solid var(--border-color, #8886);
+  text-align: left;
+}
+.research-synthesis-table {
+  overflow-x: auto;
+}
+.research-synthesis-table table {
+  border-collapse: collapse;
+  min-width: 860px;
+  width: 100%;
+}
+.research-synthesis-table th,
+.research-synthesis-table td {
+  border-bottom: 1px solid var(--border-color, #ddd);
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+  font-size: 12px;
+}

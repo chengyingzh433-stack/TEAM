@@ -1,0 +1,46 @@
+TEAM
+====
+
+TEAM is a research assistance adaptation of Lancer and pi-gui, powered by Pi.
+TEAM modifications include persistent research team workflows, guided user discussion,
+evidence/version tracking, research archives, editable document export and TEAM artwork.
+Source: https://github.com/chengyingzh433-stack/TEAM
+Lancer upstream: https://github.com/raylee-ai/lancer
+
+Historical upstream notice (retained):
+
+Lancer
+=======
+
+Lancer is a personal fork of pi-gui, the desktop app for the pi coding agent.
+
+  Upstream project: pi-gui
+  Upstream source:  https://github.com/minghinmatthewlam/pi-gui
+  Upstream version: v1.0.1
+  Upstream license: MIT License, Copyright (c) 2026 Matthew Lam
+
+The upstream MIT license text is kept unchanged in the LICENSE file and applies to
+Lancer's source modifications. Third-party dependencies, fonts, trademarks and
+media retain their own licenses; see docs/third-party-dependencies.md. The original
+upstream README is preserved at docs/upstream/README.md.
+
+Lancer modifications (summary):
+  - English / Simplified Chinese (zh-CN) interface with a persisted language switcher
+  - Rebranded app identity (Lancer, com.lancer.desktop) so it installs beside pi-gui
+  - Upstream auto-update check and release publishing removed
+  - Multi-model console features: Models & accounts screen, thread model switcher,
+    API-key setup for every pi provider that supports it
+  - Persistent local signing for Apple Silicon builds and Chinese documentation
+
+Lancer is not affiliated with or endorsed by the pi-gui or pi authors.
+Lancer uses the pi coding agent (@earendil-works/pi-coding-agent) at runtime and
+shares its configuration directory (~/.pi/agent) with pi and pi-gui.
+
+The bundled CYZ research workflow under apps/desktop/resources/workflows is
+separately licensed. CYZ educational research guidance includes adapted material
+under CC BY-NC 4.0 (Copyright 2026 Cheng-I Wu), with retained attribution,
+modification notices and historical MIT components. The humanizer-zh and
+humanizer resources retain their own MIT notices. The Lancer-specific workflow
+adapter reorganizes this material for a Pi desktop mode. These workflow resources
+are not relicensed under Lancer's MIT license. See docs/cyz-paper-workbench.md
+and the LICENSE, THIRD_PARTY_NOTICES.md and provenance.json files in the bundle.

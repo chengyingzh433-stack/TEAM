@@ -1,0 +1,74 @@
+{
+  "retrievedOn": "2026-11-06",
+  "resources": [
+    {
+      "name": "cyz-edu-research",
+      "source": "https://github.com/chengyingzh433-stack/cyz-edu-research",
+      "revision": "4ce71f1ed79031b9df291c3dbb0385a9e433fc2a",
+      "version": "0.3.1-unreleased",
+      "license": "CC-BY-NC-4.0 with retained notices",
+      "files": {
+        "LICENSE": "b3848009d12a173f549ef98d9ee486e64459e8eb5d9f895bff53782b4aa86d7c",
+        "SKILL.md": "3046dccb75fee10fca6106492951cc6225af401d70ea92fe636ca4ecb9b03cb0",
+        "THIRD_PARTY_NOTICES.md": "eecd2fe267e51db37fb9395c43ecf7a5525f1991d0cedaebe38ef1e86ee9f733",
+        "references/academic-humanization.md": "a062026dd3121b30f1d3760525d0157d3f0cb321cea9a78d434c74bd0a217b52",
+        "references/education-research-methods.md": "6fabc58d6194f2399e4855788196a9c4a96e99b4e25213b619ea470f5d8a0855",
+        "references/guided-mentor.md": "367977b8e87aa4ceb06b7ce7b2a1cf3a976f7fcb617c175874fb39b29d713c6f",
+        "references/idea-refinement.md": "e0e599079ccba1f772573c500d75a1955767149c610e7129fd97f4295338a11c",
+        "references/idea-scout.md": "7d3a824c36e124cda86161cbdd7bf741561ab402b4c1a0ea9418733b079f6ebd",
+        "references/integrity-gates.md": "c53b13be419908d06a18884cf174e8af3d338803fe0ac876deda236ede715c29",
+        "references/literature-workflow.md": "ee066a5d1f53a5a7306f44098543478c9439d89aeefc428902ede1adee27490e",
+        "references/mineru/SKILL.md": "103ec9bd947eb7533f9bb35be841bd1a55e3f110f388edfcde710efc8127b36b",
+        "references/mineru/references/desk-local.md": "23a90bb35ce529fc46a48b3da7a67668af24ba7ddf376c895b9d650da86cef74",
+        "references/mineru/references/prepare-desk.md": "06695e6c8c975520016b08140c8c89ed519255d480999ccd18584367ad8c426e",
+        "references/paper-writing.md": "3d245abe105ae667468097ef81a2be4129561399da4c79c4c81468c08b57e8c9",
+        "references/pdf-reading.md": "177fb7e0670701fad9ae35b10875e4bd3efba72dd2d2bc9e5b6e9e026c331e80",
+        "references/project-protocol.md": "7ec5f58ff2f6f10db4771bbf822bfd0ba47ff96c4198e82e68496d3ff8b53888",
+        "scripts/check_semantic_lock.py": "e39e8d533a67b68c61be0054c804d775259af74ed934e6e6266d728067a7b87f",
+        "scripts/convert_pdf_to_md.py": "f4278f18fa887b16a2013bfa66c918c22b448565c0d4a2cb26a80668fdcf8cd9",
+        "scripts/export_mineru_task.py": "86de91b485d4174cb2dfa366be9d2d6c8c416c32075384e6cd0ed27bc7d59672",
+        "scripts/init_project.py": "af1eefcbd6ea7be203fa94d95c82499fc8c4d68740eca807b09ae72c956149d7",
+        "scripts/migrate_project.py": "dd206ac264a4cea9a50a5b9ff346369f1470307edb64dc4227247456dd04366f",
+        "scripts/mineru_cache.py": "2f0e914dcc0584e0536db7306561ea2f5397679cfe2cf353cab153d3edd4cda7",
+        "scripts/validate_project.py": "2443cebbc119b52a97a67d49259da3551cacef78617a84d5bb6c5e7db5c98860",
+        "templates/academic-humanization-report.md": "57d1a7c1b3f42a289600e3cdaf87909e2cdbe5dfdd995babe80c3962ceb79879",
+        "templates/audit-report.md": "67389c91abd0e76c73c489f20c0d901cda0ac6d6dfb2992fb14ddda6d235868f",
+        "templates/evidence-matrix.md": "251222b9eb812548a26eb2fabc0587f1756999dae855d4ec8e2a069d6b64a045",
+        "templates/idea-workspace.md": "bb1d5e2ffb983065bb734f97644a1568ebfbd5e7a1dab1df5881805aa9c84120",
+        "templates/literature-card.md": "fdd210ec3461e7c0f6679be7cec481f68af1d233fc2008ec1407b7cbc4a51b64",
+        "templates/project-status.md": "16e9f048aee5a615edcc0af246a5b8c80e22af2806863f4d4a2fc2b4167ed21b",
+        "templates/rapid-scan.md": "48161ffe8a812dbe478b00216ac63c83a0907d0221d4e8453df71d935044c97b",
+        "templates/research-design.md": "a1a0a2f3e7fa071d6ec40791233365197580b946125404bb69544f437a941d71",
+        "templates/three-way-scan.md": "ed82ad580b34eae431e8d5da62077131c21629bc5906cf94e86f19d6b16cb463",
+        "third_party/qu-ai-wei-LICENSE.txt": "38afb5701ea731548bf4ec5e9f550e0150cfa5257071114eac0de1ee0902a5ef",
+        "workflow-contract.json": "1b4dc789eda59e68a94fd46fc1e4128c43ae854e2f7dfa3f126d00521becf72d"
+      }
+    },
+    {
+      "name": "humanizer-zh",
+      "source": "https://github.com/syw2039/humanizer-zh",
+      "revision": "72d73f9c8132817e21f66369de6925a659f9a6a6",
+      "version": null,
+      "license": "MIT",
+      "files": {
+        "LICENSE": "4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96",
+        "NOTICE": "dfb1834e8860aee530e23cf95c4d24cfee52b6bdab3d23a87ab4dda89ad3f3a6",
+        "SKILL.md": "171758fed76b0c5f70ff5e2284bf2bd951749ff097ddd05f33e94597f52434f5",
+        "references/chinese-ai-patterns.md": "f015ba94551a339bf114895bede410013540f059a42c230a15670ffc44c94103",
+        "README.md": "50c0c323b7855c4b952df99b2502b30f19ed2c519324725bb8dc15de425e2004"
+      }
+    },
+    {
+      "name": "humanizer",
+      "source": "https://github.com/blader/humanizer",
+      "revision": "0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0",
+      "version": "3.1.0",
+      "license": "MIT",
+      "files": {
+        "LICENSE": "4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96",
+        "SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad",
+        "README.md": "500b53c0d29cd3219d160b5f9a109c0969f706aec74b49a4a081d2026ba48ec7"
+      }
+    }
+  ]
+}

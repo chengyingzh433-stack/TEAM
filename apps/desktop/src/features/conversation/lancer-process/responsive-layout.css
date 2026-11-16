@@ -1,0 +1,267 @@
+/* Pane sizing belongs here. Zoom changes CSS viewport width just like resizing. */
+@scope (.lancer-process) {
+  .topbar__actions button {
+    flex: none;
+    min-height: 26px;
+  }
+  .topbar__actions button:has(> svg) {
+    padding: 4px;
+    justify-content: center;
+  }
+  .topbar__actions button > svg {
+    width: 16px;
+    height: 16px;
+    flex: none;
+  }
+  .body.ml {
+    position: relative;
+    grid-template-columns: auto minmax(0, 1fr) clamp(280px, 28vw, 420px);
+    min-width: 0;
+    overflow: hidden;
+  }
+  :scope.lancer-process--sidebar-collapsed .body.ml {
+    grid-template-columns: minmax(0, 1fr) clamp(280px, 30vw, 420px);
+    min-width: 0;
+  }
+  :scope.lancer-process--tools .body.ml {
+    --lancer-sidebar-default: 210px;
+    --workbench-limit: calc(100vw - var(--lancer-sidebar-width, 210px) - 600px);
+    --workbench-column: clamp(300px, var(--workbench-width, 440px), var(--workbench-limit));
+    grid-template-columns: auto minmax(0, 1fr) var(--workbench-column) 280px;
+  }
+  :scope.lancer-process--sidebar-collapsed.lancer-process--tools .body.ml {
+    --workbench-limit: calc(100vw - 600px);
+    grid-template-columns: minmax(0, 1fr) var(--workbench-column) 280px;
+  }
+  .shell-sidebar {
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    flex-shrink: 0;
+  }
+  .shell-sidebar > :not(.lst) {
+    flex-shrink: 0;
+  }
+  .shell-sidebar .lst {
+    flex: 1 0 120px;
+  }
+  .tree-panel-toggle,
+  .compact-sidebar-backdrop,
+  .compact-tree-backdrop {
+    display: none;
+  }
+  .lancer-dialog header,
+  .lancer-dialog footer {
+    flex-wrap: wrap;
+  }
+  .lancer-dialog h2 {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .lancer-dialog header > button {
+    flex: none;
+  }
+  .lancer-dialog :is(input, select, textarea, label) {
+    min-width: 0;
+  }
+  .assistant-portraits {
+    flex-wrap: wrap;
+  }
+  .slash-menu__item,
+  .slash-menu__option {
+    height: auto;
+    min-width: 0;
+    border: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .slash-menu__line {
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 2px;
+  }
+  .message__content .message__file-link {
+    height: auto;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .message__document {
+    display: inline;
+  }
+  .message__document-reveal {
+    display: inline-flex;
+    vertical-align: middle;
+    padding: 3px;
+    margin-inline-start: 5px;
+    border: 0;
+    background: transparent;
+    color: var(--tx2);
+  }
+  .message__document-error {
+    display: block;
+    color: var(--rd);
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 1200px) {
+  @scope (.lancer-process) {
+    .body.ml {
+      grid-template-columns: auto minmax(0, 1fr);
+    }
+    :scope.lancer-process--sidebar-collapsed .body.ml {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    :scope.lancer-process--tools .body.ml {
+      --workbench-limit: calc(100vw - var(--lancer-sidebar-width, 210px) - 320px);
+      grid-template-columns: auto minmax(0, 1fr) var(--workbench-column);
+    }
+    :scope.lancer-process--sidebar-collapsed.lancer-process--tools .body.ml {
+      --workbench-limit: calc(100vw - 320px);
+      grid-template-columns: minmax(0, 1fr) var(--workbench-column);
+    }
+    .rp2,
+    :scope.lancer-process--tools .rp2 {
+      display: none;
+    }
+    .tree-panel-toggle {
+      display: inline-flex;
+      flex: none;
+    }
+    .body[data-tree-open="true"] .rp2 {
+      display: flex;
+      position: absolute;
+      inset: 0 0 0 auto;
+      width: min(420px, calc(100% - 32px));
+      z-index: 22;
+      background: var(--bg);
+      box-shadow: -6px 0 24px #0002;
+    }
+    .compact-tree-backdrop {
+      display: block;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 0;
+      background: var(--scrim);
+      z-index: 21;
+    }
+    .brand span {
+      display: none;
+    }
+    .reel {
+      position: relative;
+      left: auto;
+      top: auto;
+      transform: none;
+      flex: 1;
+      min-width: 0;
+      width: auto;
+      overflow: hidden;
+    }
+    .tright {
+      margin-left: 0;
+      flex: none;
+      gap: 4px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  @scope (.lancer-process) {
+    :scope.lancer-process--tools .body.ml {
+      grid-template-columns: auto minmax(0, 1fr);
+    }
+    :scope.lancer-process--sidebar-collapsed.lancer-process--tools .body.ml {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .process-tool-panel {
+      position: absolute;
+      inset: 0 0 0 auto;
+      width: min(var(--workbench-width, 440px), 100%);
+      z-index: 12;
+      background: var(--bg);
+      box-shadow: -6px 0 24px #0002;
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  @scope (.lancer-process) {
+    .body.ml,
+    :scope.lancer-process--tools .body.ml {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .shell-sidebar {
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: min(288px, calc(100% - 32px));
+      z-index: 20;
+      box-shadow: 6px 0 24px #0002;
+    }
+    .compact-sidebar-backdrop {
+      display: block;
+      position: absolute;
+      inset: 0 0 0 min(288px, calc(100% - 32px));
+      width: auto;
+      height: 100%;
+      border: 0;
+      border-radius: 0;
+      background: var(--scrim);
+      z-index: 19;
+    }
+    .tbar {
+      gap: 6px;
+      padding-right: 8px;
+    }
+    .brand {
+      display: none;
+    }
+    .lancer-dialog {
+      width: calc(100vw - 24px);
+      max-height: calc(100dvh - 24px);
+      padding: 16px;
+    }
+    .workflow-editor__row {
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .workflow-editor__row label:first-child,
+    .workflow-editor__row label:nth-child(2) {
+      flex: 1 1 100%;
+      margin-block: 8px;
+    }
+    .workflow-editor__row > button {
+      margin-left: auto;
+    }
+    .cmp .composer {
+      width: calc(100% - 24px);
+    }
+    .cvh {
+      flex-wrap: wrap;
+      height: auto;
+      min-height: 44px;
+      padding-block: 6px;
+      gap: 6px;
+    }
+    .cvh .r {
+      margin-left: 0;
+    }
+    .sb {
+      overflow: hidden;
+    }
+  }
+}
+
+@media (max-height: 600px) {
+  .composer textarea {
+    max-height: 26dvh;
+  }
+  .slash-menu {
+    max-height: min(420px, 42dvh);
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "languageRouting": {
+    "zh": "humanizer-zh",
+    "en": "humanizer"
+  },
+  "canonicalDirectoryHashAlgorithm": "relativePath<TAB>fileSha256<TAB>byteLength<LF>, sorted by relativePath, excluding __pycache__, *.pyc, and *.pyo; SHA-256 of UTF-8 bytes",
+  "dependencies": [
+    {
+      "name": "humanizer-zh",
+      "version": null,
+      "versionStatus": "unknown",
+      "upstream": "https://github.com/syw2039/humanizer-zh",
+      "sourceStatus": "declared-in-README",
+      "license": "MIT",
+      "licenseStatus": "declared-in-LICENSE",
+      "revision": "72d73f9c8132817e21f66369de6925a659f9a6a6",
+      "installations": [
+        {
+          "root": "lancer-bundled",
+          "fileCount": 5,
+          "bytes": 22234,
+          "directorySha256": "6cde55bc892846d15ce7098f5a7fcd7d050f6e9496d21c56b3be5f520860adff"
+        }
+      ]
+    },
+    {
+      "name": "humanizer",
+      "version": "3.1.0",
+      "versionStatus": "declared",
+      "upstream": "https://github.com/blader/humanizer",
+      "sourceStatus": "declared-in-README",
+      "license": "MIT",
+      "licenseStatus": "declared-in-SKILL-and-LICENSE",
+      "revision": "0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0",
+      "installations": [
+        {
+          "root": "lancer-bundled",
+          "fileCount": 3,
+          "bytes": 46340,
+          "directorySha256": "04f217f0ec41c41e2538ddf65af512952d454cefb93df577d332a2621d64d82f"
+        }
+      ]
+    }
+  ]
+}

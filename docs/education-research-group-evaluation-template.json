@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "protocol": null,
+  "tasks": [
+    {
+      "task": "question-design",
+      "registration": null
+    },
+    {
+      "task": "literature-synthesis",
+      "registration": null
+    },
+    {
+      "task": "analysis-writing",
+      "registration": null
+    }
+  ],
+  "runs": [
+    {
+      "id": "question-design-1-serial",
+      "order": 1,
+      "task": "question-design",
+      "repeat": 1,
+      "condition": "serial",
+      "status": "pending",
+      "observation": null
+    },
+    {
+      "id": "question-design-1-collaborative",
+      "order": 2,
+      "task": "question-design",
+      "repeat": 1,
+      "condition": "collaborative",
+      "status": "pending",
+      "observation": null
+    },
+    {
+      "id": "literature-synthesis-1-collaborative",
+      "order": 3,
+      "task": "literature-synthesis",
+      "repeat": 1,
+      "condition": "collaborative",
+      "status": "pending",
+      "observation": null
+    },
+    {
+      "id": "literature-synthesis-1-serial",
+      "order": 4,
+      "task": "literature-synthesis",
+      "repeat": 1,
+      "condition": "serial",
+      "status": "pending",
+      "observation": null
+    },
+    {
+      "id": "analysis-writing-1-serial",
+      "order": 5,
+      "task": "analysis-writing",
+      "repeat": 1,
+      "condition": "serial",
+      "status": "pending",
+      "observation": null
+    },
+    {
+      "id": "analysis-writing-1-collaborative",
+      "order": 6,
+      "task": "analysis-writing",
+      "repeat": 1,
+      "condition": "collaborative",
+      "status": "pending",
+      "observation": null
+    },
+    {
+      "id": "question-design-2-collaborative",
+      "order": 7,
+      "task": "question-design",
+      "repeat": 2,
+      "condition": "collaborative",
+      "status": "pending",
+      "observation": null
+    },
+    {
+      "id": "question-design-2-serial",
+      "order": 8,
+      "task": "question-design",
+      "repeat": 2,
+      "condition": "serial",
+      "status": "pending",
+      "observation": null
+    },
+    {
+      "id": "literature-synthesis-2-serial",
+      "order": 9,
+      "task": "literature-synthesis",
+      "repeat": 2,
+      "condition": "serial",
+      "status": "pending",
+      "observation": null
+    },
+    {
+      "id": "literature-synthesis-2-collaborative",
+      "order": 10,
+      "task": "literature-synthesis",
+      "repeat": 2,
+      "condition": "collaborative",
+      "status": "pending",
+      "observation": null
+    },
+    {
+      "id": "analysis-writing-2-collaborative",
+      "order": 11,
+      "task": "analysis-writing",
+      "repeat": 2,
+      "condition": "collaborative",
+      "status": "pending",
+      "observation": null
+    },
+    {
+      "id": "analysis-writing-2-serial",
+      "order": 12,
+      "task": "analysis-writing",
+      "repeat": 2,
+      "condition": "serial",
+      "status": "pending",
+      "observation": null
+    },
+    {
+      "id": "question-design-3-serial",
+      "order": 13,
+      "task": "question-design",
+      "repeat": 3,
+      "condition": "serial",
+      "status": "pending",
+      "observation": null
+    },
+    {
+      "id": "question-design-3-collaborative",
+      "order": 14,
+      "task": "question-design",
+      "repeat": 3,
+      "condition": "collaborative",
+      "status": "pending",
+      "observation": null
+    },
+    {
+      "id": "literature-synthesis-3-collaborative",
+      "order": 15,
+      "task": "literature-synthesis",
+      "repeat": 3,
+      "condition": "collaborative",
+      "status": "pending",
+      "observation": null
+    },
+    {
+      "id": "literature-synthesis-3-serial",
+      "order": 16,
+      "task": "literature-synthesis",
+      "repeat": 3,
+      "condition": "serial",
+      "status": "pending",
+      "observation": null
+    },
+    {
+      "id": "analysis-writing-3-serial",
+      "order": 17,
+      "task": "analysis-writing",
+      "repeat": 3,
+      "condition": "serial",
+      "status": "pending",
+      "observation": null
+    },
+    {
+      "id": "analysis-writing-3-collaborative",
+      "order": 18,
+      "task": "analysis-writing",
+      "repeat": 3,
+      "condition": "collaborative",
+      "status": "pending",
+      "observation": null
+    }
+  ]
+}

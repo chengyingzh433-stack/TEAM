@@ -1,0 +1,72 @@
+{
+  "id": "legacy-version-one",
+  "createdAt": "2026-11-08T10:00:00.000Z",
+  "baseline": {
+    "id": "legacy-baseline",
+    "body": "这是探索性再分析，不是首次发现。",
+    "bodySha256": "3b2ee2b6ea4ab25758546b488aaa28ee931b1ca242d19c8520997f8abbb9ee17"
+  },
+  "target": {
+    "id": "legacy-target",
+    "body": "这是探索性再分析，是首次发现。",
+    "bodySha256": "543f4df90c775227e8963855a0ac7285e810fe6a3146c9763dc74bdd457b44c3"
+  },
+  "authorization": {
+    "id": "old-user-selection",
+    "at": "2026-11-08T10:00:00.000Z",
+    "kind": "explicit-user-selection",
+    "sourceRef": "unit:legacy-producer-41b7680"
+  },
+  "ranges": [
+    {
+      "id": "whole",
+      "label": "合成历史稿",
+      "start": 0,
+      "end": 16,
+      "exactText": "这是探索性再分析，不是首次发现。"
+    }
+  ],
+  "frozenAnchors": [],
+  "programReport": {
+    "programVersion": "language-revisions-1",
+    "at": "2026-11-08T10:00:00.000Z",
+    "baselineSha256": "3b2ee2b6ea4ab25758546b488aaa28ee931b1ca242d19c8520997f8abbb9ee17",
+    "targetSha256": "543f4df90c775227e8963855a0ac7285e810fe6a3146c9763dc74bdd457b44c3",
+    "changes": [
+      {
+        "id": "change:b1a7959f1101755f7283e4585642cd1e220227d061d8d2d250665074c4be2539",
+        "baseline": {
+          "start": 9,
+          "end": 10,
+          "exactText": "不"
+        },
+        "target": {
+          "start": 9,
+          "end": 9,
+          "exactText": ""
+        }
+      }
+    ],
+    "units": [
+      {
+        "id": "paragraph:e128282aa9a31db9a04e8edb7f2f0f816297c30497b0a17e9b7f7eef8ca068df",
+        "rangeId": "whole",
+        "baseline": {
+          "start": 0,
+          "end": 16,
+          "exactText": "这是探索性再分析，不是首次发现。"
+        },
+        "target": {
+          "start": 0,
+          "end": 15,
+          "exactText": "这是探索性再分析，是首次发现。"
+        }
+      }
+    ],
+    "hardIssues": [],
+    "semanticCandidates": [],
+    "boundary": "程序仅核对未选正文、显式冻结锚点及已识别表达；否定/因果/样本/强度提示不是完整语义理解。无词法候选的改动仍需具名A/B双稿逐段复核；模型意见不是人类审阅或伦理审批。",
+    "sha256": "6b08140f17330f8b5039cd51cfc8cd6dc04ba152dda6ea6e76812d2da3a65a55"
+  },
+  "semanticReviews": []
+}
